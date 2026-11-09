@@ -359,3 +359,66 @@ ol.plain {
 .prose blockquote p:last-child {
   margin-bottom: 0;
 }
+
+/* Designer pack 2026-11-09: how-to fold CTA (kit link + disclosure before first paid) */
+.fold-cta {
+  margin: 0 0 1.4rem;
+  padding: 1rem 1rem 1.05rem;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+}
+.fold-cta .kicker { margin: 0 0 0.5rem; }
+.fold-cta .pick-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+.fold-cta .pick-note {
+  margin: 0.65rem 0 0.55rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.fold-cta .kit-link,
+.fold-cta a.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.85rem;
+  box-sizing: border-box;
+  background: var(--brick);
+  color: #f6f3ea !important;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 1.25;
+  flex-wrap: wrap;
+  column-gap: 0.35em;
+}
+.fold-cta a.btn-secondary {
+  background: transparent;
+  color: var(--brick-2) !important;
+  border: 2px solid var(--brick-2);
+  margin-top: 0.35rem;
+}
+.fold-cta .kit-link .paid { color: #f0dcd3; font-style: normal; font-weight: 500; }
+@media (max-width: 639px) {
+  .fold-cta .kit-link {
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Designer pack 2026-11-09: home cards into 390 fold — note moved below cards in HTML; tighten mobile spacing */
+@media (max-width: 639px) {
+  .lede { margin-bottom: 0.75rem; }
+  .grid.three { gap: 0.75rem; margin-top: 0.5rem; }
+  .card { padding: 0.9rem 1rem 1rem; }
+}
+
